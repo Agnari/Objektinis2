@@ -34,3 +34,4 @@
 #custor
 *.pdb
 *.ilk
+.vs
