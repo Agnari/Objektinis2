@@ -4,7 +4,12 @@
 #include <string>
 #include <time.h>
 #include <algorithm>
+#include <fstream>
+#include <sstream>
 
+using std::stringstream;
+using std::ifstream;
+using std::ofstream;
 using std::cin;
 using std::cout;
 using std::setw;
