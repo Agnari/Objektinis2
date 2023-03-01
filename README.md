@@ -32,3 +32,5 @@ Both solutions supported by _Mylib.h_.
 - Now grade cannot be 0.
 - Added new exceptions in file reading function _"GatherFileData"_.
 - _Notes.md_ and _README.md_ moved to _"ReadOnly"_ folder.
+
+
