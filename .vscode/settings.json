@@ -4,6 +4,9 @@
         "xstring": "cpp",
         "iomanip": "cpp",
         "ios": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "vector": "cpp",
+        "gatheruserdata": "cpp",
+        "countrow&col": "cpp"
     }
 }

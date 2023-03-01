@@ -22,3 +22,15 @@ Both solutions supported by _Mylib.h_.
 - All subjects now sorted by their names. Added functions for sorting:
     - _Compare_.
     - _sort_ (int main).
+
+# v0.3
+### Updates
+- All functions separated into different **cpp** files. Files are stored in _"functions"_ folder.
+- **Struct Student** moved to header file _"Student.h"_.
+- **#include** of all functions stored in header file _"Functions.h"_.
+- **Header files** moved to _"headers"_ folder.
+- Now grade cannot be 0.
+- Added new exceptions in file reading function _"GatherFileData"_.
+- _Notes.md_ and _README.md_ moved to _"ReadOnly"_ folder.
+
+
