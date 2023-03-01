@@ -1,0 +1,7 @@
+#include "./functions/CalcData.cpp"
+#include "./functions/GatherUserData.cpp"
+#include "./functions/CountRows.cpp"
+#include "./functions/CountColumns.cpp"
+#include "./functions/GatherFileData.cpp"
+#include "./functions/Compare.cpp"
+#include "./functions/PrintData.cpp"
