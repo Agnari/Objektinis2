@@ -31,6 +31,16 @@ Both solutions supported by _Mylib.h_.
 - **Header files** moved to _"headers"_ folder.
 - Now grade cannot be 0.
 - Added new exceptions in file reading function _"GatherFileData"_.
-- _Notes.md_ and _README.md_ moved to _"ReadOnly"_ folder.
+- _Notes.md_ moved to _"ReadOnly"_ folder.
 
+# v0.4
+### Updates
+- Some functions now separated into new cpp files.
+- Updated *"Mylib.h"*.
+- Global variable _finaltype_ is now in *"Answers.h"*.
 
+### New
+- Added new **file generator**, which uses buffer.
+- Added new **struct Answers** in header file *"Answers.h"*, for storing settings.
+- New function Settings now allows to choose how to work with data.
+- _"Datatype3"_ function allows to generate new files and use them to sort students into two groups: _smart_ and _stupid_.

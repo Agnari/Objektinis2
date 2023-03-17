@@ -1,7 +1,7 @@
 
-int CountColumns()
+int CountColumns(string filename)
 {
-	ifstream readf("kursiokai.txt");
+	ifstream readf(filename);
 
 	string line;
 	getline(readf, line);

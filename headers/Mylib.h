@@ -6,7 +6,14 @@
 #include <algorithm>
 #include <fstream>
 #include <sstream>
+#include <cstdlib>
+#include <chrono>
 
+using std::istringstream;
+using std::chrono::high_resolution_clock;
+using std::chrono::duration_cast;
+using std::chrono::microseconds;
+using std::to_string;
 using std::stringstream;
 using std::ifstream;
 using std::ofstream;
