@@ -44,12 +44,10 @@ Both solutions supported by _Mylib.h_.
 - Added new **struct Answers** in header file *"Answers.h"*, for storing settings.
 - New function Settings now allows to choose how to work with data.
 - _"Datatype3"_ function allows to generate new files and use them to sort students into two groups: _smart_ and _stupid_.
-
+- Time measured is seconds.
 |                    | 1'000  | 10'000 | 100'000 | 1'000'000 | 10'000'00 |
 |--------------------|--------|--------|---------|-----------|-----------|
 | Created            | 0,0057 | 0,0403 | 0,4077  | 4,1532    | 44,9614   |
 | Read and<br>sorted | 0,0384 | 0,3523 | 3,4296  | 32,8797   | 284,6534  |
-|--------------------|--------|--------|---------|-----------|-----------|
 | Smart.txt and Stupid.txt created     | 322,9005                        |
-|--------------------|--------|--------|---------|-----------|-----------|
-| Program duration   |                 | 372,5057                        |
+| Program duration                     | 372,5057                        |
