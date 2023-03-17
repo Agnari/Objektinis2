@@ -1,7 +1,7 @@
 
-int CountRows()
+int CountRows(string filename)
 {
-	ifstream readf("kursiokai.txt");
+	ifstream readf(filename);
 	string line;
 	int r = 0;
 

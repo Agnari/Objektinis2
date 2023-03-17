@@ -7,6 +7,9 @@
         "ostream": "cpp",
         "vector": "cpp",
         "gatheruserdata": "cpp",
-        "countrow&col": "cpp"
+        "countrow&col": "cpp",
+        "iostream": "cpp",
+        "string": "cpp",
+        "algorithm": "cpp"
     }
 }
