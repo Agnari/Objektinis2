@@ -45,6 +45,7 @@ Both solutions supported by _Mylib.h_.
 - New function Settings now allows to choose how to work with data.
 - _"Datatype3"_ function allows to generate new files and use them to sort students into two groups: _smart_ and _stupid_.
 - Time measured is seconds.
+    
 |                    | 1'000  | 10'000 | 100'000 | 1'000'000 | 10'000'00 |
 |--------------------|--------|--------|---------|-----------|-----------|
 | Created            | 0,0057 | 0,0403 | 0,4077  | 4,1532    | 44,9614   |
