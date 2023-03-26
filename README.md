@@ -33,7 +33,7 @@ Both solutions supported by _Mylib.h_.
 - Added new exceptions in file reading function _"GatherFileData"_.
 - _Notes.md_ moved to _"ReadOnly"_ folder.
 
-# v0.4
+# v0.5
 ### Updates
 - Some functions now separated into new cpp files.
 - Updated *"Mylib.h"*.
