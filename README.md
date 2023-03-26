@@ -33,7 +33,7 @@ Both solutions supported by _Mylib.h_.
 - Added new exceptions in file reading function _"GatherFileData"_.
 - _Notes.md_ moved to _"ReadOnly"_ folder.
 
-# v0.5
+# v0.4
 ### Updates
 - Some functions now separated into new cpp files.
 - Updated *"Mylib.h"*.
@@ -53,7 +53,7 @@ Both solutions supported by _Mylib.h_.
 | Smart.txt and Stupid.txt created     | 322,9005                        |
 | Program duration                     | 372,5057                        |
 
-# v0.4
+# v0.5
 ### Changes
 - vector.cpp now renamed into main.cpp.
 - updated Student.h.
