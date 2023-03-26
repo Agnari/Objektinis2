@@ -1,37 +1,44 @@
 #include "./headers/Mylib.h"
-#include "./headers/Student.h"
+#include "./headers/DeStudent.h"
 
 bool Compare(const Student &a, const Student &b)
 {
     return a.finalA < b.finalA;
 }
 
-void CalcData(Student &temp)
+void CalcData(Student &tempDe)
 {
     float avg = 0;
-    if (!temp.grades.empty())
+    if (!tempDe.grades.empty())
     {
         float sum = 0;
-        for (float grade : temp.grades)
+        for (int grade : tempDe.grades)
         {
             sum += grade;
         }
-        avg = sum / temp.grades.size();
+        avg = (float)sum / tempDe.grades.size();
+    }
+    else
+    {
+        avg = 0;
     }
 
-    temp.finalA = (0.4 * avg) + (0.6 * temp.exam);
+    tempDe.finalA = (float)(0.4 * avg) + (0.6 * tempDe.exam);
 
     float median = 0;
-    if (!temp.grades.empty())
+    if (!tempDe.grades.empty())
     {
-        sort(temp.grades.begin(), temp.grades.end());
-        if (temp.grades.size() % 2 == 0)
+        std::sort(tempDe.grades.begin(), tempDe.grades.end());
+        if (tempDe.grades.size() % 2 == 0)
         {
-            median = (temp.grades[temp.grades.size() / 2 - 1] + temp.grades[temp.grades.size() / 2]) / 2.0;
+            int mid1 = tempDe.grades.size() / 2 - 1;
+            int mid2 = tempDe.grades.size() / 2;
+            median = (float)(tempDe.grades[mid1] + tempDe.grades[mid2]) / 2.0;
         }
         else
         {
-            median = temp.grades[temp.grades.size() / 2];
+            int mid = tempDe.grades.size() / 2;
+            median = tempDe.grades[mid];
         }
     }
     else
@@ -39,19 +46,19 @@ void CalcData(Student &temp)
         median = 0;
     }
 
-    temp.finalM = (0.4 * median) + (0.6 * temp.exam);
+    tempDe.finalM = (0.4 * median) + (0.6 * tempDe.exam);
 }
 
 void FillStudentStruct(istringstream &line)
 {
-    line >> temp.name >> temp.surname;
+    line >> tempDe.name >> tempDe.surname;
     int grade = 0;
     for (int j = 0; j < 10; j++)
     {
         line >> grade;
         if (grade >= 1 && grade <= 10)
         {
-            temp.grades.push_back(grade);
+            tempDe.grades.push_back(grade);
         }
         else
         {
@@ -63,17 +70,17 @@ void FillStudentStruct(istringstream &line)
     line >> exam;
     if (exam >= 1 && exam <= 10)
     {
-        temp.exam = exam;
+        tempDe.exam = exam;
     }
     else
     {
         throw "Data in file must contain name, surname, homework grades and exam grade. Please, check your file.";
     }
 
-    CalcData(temp);
-    Group.push_back(temp);
-    temp.exam = NULL;
-    temp.grades.clear();
+    CalcData(tempDe);
+    Group.push_back(tempDe);
+    tempDe.exam = NULL;
+    tempDe.grades.clear();
 }
 
 void Read(int k)
@@ -97,15 +104,15 @@ void Read(int k)
 void TwoGroups()
 {
 
-    for (const auto &temp : Group)
+    for (const auto &tempDe : Group)
     {
-        if (temp.finalA > 5)
+        if (tempDe.finalA > 5)
         {
-            Smart.push_back(temp);
+            Smart.push_back(tempDe);
         }
         else
         {
-            Stupid.push_back(temp);
+            Stupid.push_back(tempDe);
         }
     }
 }

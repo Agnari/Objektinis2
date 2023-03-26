@@ -8,7 +8,12 @@
 #include <sstream>
 #include <cstdlib>
 #include <chrono>
+#include <deque>
+#include <list>
 
+using std::next;
+using std::deque;
+using std::list;
 using std::istringstream;
 using std::chrono::high_resolution_clock;
 using std::chrono::duration_cast;
