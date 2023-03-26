@@ -1,37 +1,44 @@
 #include "./headers/Mylib.h"
-#include "./headers/Student.h"
+#include "./headers/LiStudent.h"
 
 bool Compare(const Student &a, const Student &b)
 {
     return a.finalA < b.finalA;
 }
 
-void CalcData(Student &temp)
+void CalcData(Student &tempLi)
 {
     float avg = 0;
-    if (!temp.grades.empty())
+    if (tempLi.grades.size() != 0)
     {
         float sum = 0;
-        for (float grade : temp.grades)
+        for (int grades : tempLi.grades)
         {
-            sum += grade;
+            sum += grades;
         }
-        avg = sum / temp.grades.size();
+        avg = (float)sum / tempLi.grades.size();
+    }
+    else
+    {
+        avg = 0;
     }
 
-    temp.finalA = (0.4 * avg) + (0.6 * temp.exam);
+    tempLi.finalA = (float)(0.4 * avg) + (0.6 * tempLi.exam);
 
     float median = 0;
-    if (!temp.grades.empty())
+    if (!tempLi.grades.empty())
     {
-        sort(temp.grades.begin(), temp.grades.end());
-        if (temp.grades.size() % 2 == 0)
+        tempLi.grades.sort();
+        if (tempLi.grades.size() % 2 == 0)
         {
-            median = (temp.grades[temp.grades.size() / 2 - 1] + temp.grades[temp.grades.size() / 2]) / 2.0;
+            auto it1 = next(tempLi.grades.begin(), tempLi.grades.size() / 2 - 1);
+            auto it2 = next(tempLi.grades.begin(), tempLi.grades.size() / 2);
+            median = (float)(*it1 + *it2) / 2.0;
         }
         else
         {
-            median = temp.grades[temp.grades.size() / 2];
+            auto it = next(tempLi.grades.begin(), tempLi.grades.size() / 2);
+            median = *it;
         }
     }
     else
@@ -39,19 +46,19 @@ void CalcData(Student &temp)
         median = 0;
     }
 
-    temp.finalM = (0.4 * median) + (0.6 * temp.exam);
+    tempLi.finalM = (0.4 * median) + (0.6 * tempLi.exam);
 }
 
 void FillStudentStruct(istringstream &line)
 {
-    line >> temp.name >> temp.surname;
+    line >> tempLi.name >> tempLi.surname;
     int grade = 0;
     for (int j = 0; j < 10; j++)
     {
         line >> grade;
         if (grade >= 1 && grade <= 10)
         {
-            temp.grades.push_back(grade);
+            tempLi.grades.push_back(grade);
         }
         else
         {
@@ -63,17 +70,17 @@ void FillStudentStruct(istringstream &line)
     line >> exam;
     if (exam >= 1 && exam <= 10)
     {
-        temp.exam = exam;
+        tempLi.exam = exam;
     }
     else
     {
         throw "Data in file must contain name, surname, homework grades and exam grade. Please, check your file.";
     }
 
-    CalcData(temp);
-    Group.push_back(temp);
-    temp.exam = NULL;
-    temp.grades.clear();
+    CalcData(tempLi);
+    Group.push_back(tempLi);
+    tempLi.exam = NULL;
+    tempLi.grades.clear();
 }
 
 void Read(int k)
@@ -97,15 +104,15 @@ void Read(int k)
 void TwoGroups()
 {
 
-    for (const auto &temp : Group)
+    for (const auto &tempLi : Group)
     {
-        if (temp.finalA > 5)
+        if (tempLi.finalA > 5)
         {
-            Smart.push_back(temp);
+            Smart.push_back(tempLi);
         }
         else
         {
-            Stupid.push_back(temp);
+            Stupid.push_back(tempLi);
         }
     }
 }
@@ -122,7 +129,7 @@ int main()
         cout << "File " << k << ".txt read in: " << fixed << setprecision(4) << duration1.count() / 1000000.0 << " seconds" << endl;
 
         auto start2 = high_resolution_clock::now();
-        sort(Group.begin(), Group.end(), Compare);
+        Group.sort(Compare);
         auto stop2 = high_resolution_clock::now();
         auto duration2 = duration_cast<microseconds>(stop2 - start2);
         cout << "File " << k << ".txt sorted by grade: " << fixed << setprecision(4) << duration1.count() / 1000000.0 << duration2.count() << " seconds" << endl;
@@ -131,7 +138,7 @@ int main()
         TwoGroups();
         auto stop3 = high_resolution_clock::now();
         auto duration3 = duration_cast<microseconds>(stop3 - start3);
-        cout << "File " << k << ".txt sorted into smart and stupid in: " << fixed << setprecision(4) << duration1.count() / 1000000.0 << duration3.count() << " seconds" << endl;
+        cout << "File " << k << ".txt sorted into smart and stupid in: " << fixed << setprecision(4) << duration1.count() / 1000000.0 << duration3.count()  << " seconds" << endl;
 
         Group.clear();
 

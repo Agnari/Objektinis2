@@ -4,10 +4,11 @@ void Settings()
 	cout << "Choose option (1-3):" << endl;
 	cout << "1. Manual input" << endl;
 	cout << "2. Read from file" << endl;
-	cout << "3. Generate random data files" << endl;
+	cout << "3. Work with random generated files" << endl;
+	cout << "4. Only generate files" << endl;
 
 	cin >> answ.datatype;
-	while (answ.datatype != 1 && answ.datatype != 2 && answ.datatype != 3)
+	while (answ.datatype != 1 && answ.datatype != 2 && answ.datatype != 3 && answ.datatype != 4)
 	{
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -16,7 +17,8 @@ void Settings()
 		cout << "Choose option (1-3):" << endl;
 		cout << "1. Manual input" << endl;
 		cout << "2. Read from file" << endl;
-		cout << "3. Generate random data files" << endl;
+		cout << "3. Work with random generated files" << endl;
+		cout << "4. Only generate files" << endl;
 		cin >> answ.datatype;
 	};
 

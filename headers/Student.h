@@ -7,4 +7,6 @@ struct Student
 	float finalA = 0;
 };
 vector<Student> Group;
+vector<Student> Smart;
+vector<Student> Stupid;
 Student temp;
