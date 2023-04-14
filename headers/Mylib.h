@@ -11,6 +11,10 @@
 #include <deque>
 #include <list>
 
+using std::stable_sort;
+using std::partition;
+using std::stable_sort;
+using std::move;
 using std::next;
 using std::deque;
 using std::list;
