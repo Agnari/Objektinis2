@@ -96,36 +96,27 @@ void Read(int k)
 
 void TwoGroups()
 {
+    auto is_smart = [](const Student &s)
+    { return s.finalA > 5; };
+    auto middle = partition(Group.begin(), Group.end(), is_smart);
 
-    for (const auto &temp : Group)
-    {
-        if (temp.finalA > 5)
-        {
-            Smart.push_back(temp);
-        }
-        else
-        {
-            Stupid.push_back(temp);
-        }
-    }
+    vector<Student> new_smart(middle, Group.end());
+    vector<Student> new_stupid(Group.begin(), middle);
+
+    Smart = move(new_smart);
+    Stupid = move(new_stupid);
 }
 
 void OneNewGroup()
 {
-    for (auto it = Group.begin(); it != Group.end();)
-    {
-        if (it->finalA < 5)
-        {
-            // Move the element to the Stupid vector
-            Stupid.push_back(move(*it));
-            // Erase the element from the Group vector and update the iterator
-            it = Group.erase(it);
-        }
-        else
-        {
-            ++it;
-        }
-    }
+    auto is_stupid = [](const Student &s)
+    { return s.finalA < 5; };
+    auto middle = partition(Group.begin(), Group.end(), is_stupid);
+
+    vector<Student> new_stupid(Group.begin(), middle);
+    Stupid.insert(Stupid.end(), new_stupid.begin(), new_stupid.end());
+
+    Group.erase(Group.begin(), middle);
 }
 
 int main()

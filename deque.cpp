@@ -117,8 +117,42 @@ void TwoGroups()
     }
 }
 
+void OneNewGroup()
+{
+    for (auto it = Group.begin(); it != Group.end();)
+    {
+        if (it->finalA < 5)
+        {
+            // Move the element to the Stupid deque
+            Stupid.push_back(move(*it));
+            // Erase the element from the Group deque and update the iterator
+            it = Group.erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
+}
+
 int main()
 {
+    int str = 0;
+    cout << "Choose strategy (1-2):" << endl;
+    cout << "Strategy 1: split list of students into two groups 'smart' and 'stupid" << endl;
+    cout << "Strategy 2: sort stupid students into new list 'stupid'." << endl;
+    cin >> str;
+    while (str != 1 && str != 2)
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Wrong answer." << endl;
+        cout << "Choose strategy (1-2):" << endl;
+        cout << "Strategy 1: split list of students into two groups 'smart' and 'stupid" << endl;
+        cout << "Strategy 2: sort stupid students into new list 'stupid'." << endl;
+        cin >> str;
+    };
+
     int k = 1000;
     for (int i = 0; i < 5; i++)
     {
@@ -127,20 +161,39 @@ int main()
         auto stop1 = high_resolution_clock::now();
         auto duration1 = duration_cast<microseconds>(stop1 - start1);
         cout << "File " << k << ".txt read in: " << fixed << setprecision(4) << duration1.count() / 1000000.0 << " seconds" << endl;
+        cout << endl;
 
         auto start2 = high_resolution_clock::now();
         sort(Group.begin(), Group.end(), Compare);
         auto stop2 = high_resolution_clock::now();
         auto duration2 = duration_cast<microseconds>(stop2 - start2);
-        cout << "File " << k << ".txt sorted by grade: " << fixed << setprecision(4) << duration1.count() / 1000000.0 << duration2.count() << " seconds" << endl;
+        cout << "File " << k << ".txt sorted by grade: " << fixed << setprecision(4) << duration2.count() / 1000000.0 << " seconds" << endl;
+        cout << endl;
 
-        auto start3 = high_resolution_clock::now();
-        TwoGroups();
-        auto stop3 = high_resolution_clock::now();
-        auto duration3 = duration_cast<microseconds>(stop3 - start3);
-        cout << "File " << k << ".txt sorted into smart and stupid in: " << fixed << setprecision(4) << duration1.count() / 1000000.0 << duration3.count() << " seconds" << endl;
+        if (str == 1)
+        {
+            cout << "Strategy 1:" << endl;
+            auto start3 = high_resolution_clock::now();
+            TwoGroups();
+            auto stop3 = high_resolution_clock::now();
+            auto duration3 = duration_cast<microseconds>(stop3 - start3);
+            cout << "File " << k << ".txt sorted into smart and stupid in: " << fixed << setprecision(4) << duration3.count() / 1000000.0 << " seconds" << endl;
+            cout << endl;
+        }
+        else if (str == 2)
+        {
+            cout << "Strategy 2:" << endl;
+            auto start4 = high_resolution_clock::now();
+            OneNewGroup();
+            auto stop4 = high_resolution_clock::now();
+            auto duration4 = duration_cast<microseconds>(stop4 - start4);
+            cout << "File " << k << ".txt sorted into stupid in: " << fixed << setprecision(4) << duration4.count() / 1000000.0 << " seconds" << endl;
+        }
 
         Group.clear();
+
+        cout << endl;
+        cout << "====================================================================================================" << endl;
 
         k = k * 10;
     }

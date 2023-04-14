@@ -28,10 +28,11 @@ int main()
 		else if(answ.datatype == 4)
 		{
 			int k = 1000;
-			for (int i = 0; i < k; i++)
+			for (int i = 0; i < 5; i++)
 			{
 				GenerateFileData(k);
 				k = k * 10;
+				cout << "..." << endl;
 			}
 		}
 	}
