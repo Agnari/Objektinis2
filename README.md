@@ -70,9 +70,6 @@ There are no prepared data files in this repository to work with. Before testing
 #### Memory
 - **Strategy 1** should appear as **the most memory consuming** way for sorting data, but it is difficult to measure difference while sorting data, since large part of the memory goes to reading and storing data into container.
 
-#### Memory
-- **Strategy 1** should appear as the most memory consuming way for sorting data, but it is difficult to measure difference while sorting data, since large part of the memory goes to reading and storing data into container.
-
 # v0.5
 ### Changes
 - vector.cpp now renamed into main.cpp.
