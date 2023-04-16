@@ -16,19 +16,10 @@
 3. Choose your preferred method.
     - Method 1: Run file you chose.
     - Method 2: Open new terminal and write ./name (e.g.: ./main).
-
-#### No-code-editor method
-
-1. Download this repository or choose to download Release V1.0 and extract files.
-2. Open folder where all files are stored, choose *.exe file you want and run. There are 5 executable files:
-    - **obj_main.exe** for main.cpp
-    - **obj_list.exe** for list.cpp
-    - **obj_vector.exe** for vector.cpp
-    - **obj_up_vec.exe** for upgradedVector.cpp
-    - **obj_deque.exe** for deque.cpp
+4. Follow instructions in console.
 
 **IMPORTANT:**
-There are no prepared data files in this repository to work with. Before testing any program you must run **main.cpp** and choose **4. Only generate files**.
+There are no prepared data files in this repository to work with. Before testing any program you must run **main.cpp** and choose **4. Only generate files**. Data files will be generated in *data* directory.
 
 **Exception:** file kursiokai.txt is ONLY for main.cpp "2. Read from file" function.
 

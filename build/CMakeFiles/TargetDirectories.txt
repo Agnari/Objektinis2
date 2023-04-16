@@ -1,7 +1,0 @@
-C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build/CMakeFiles/obj_main.dir
-C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build/CMakeFiles/obj_vector.dir
-C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build/CMakeFiles/obj_list.dir
-C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build/CMakeFiles/obj_deque.dir
-C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build/CMakeFiles/obj_up_vec.dir
-C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build/CMakeFiles/edit_cache.dir
-C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build/CMakeFiles/rebuild_cache.dir
