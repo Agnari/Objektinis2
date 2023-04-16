@@ -1,7 +1,7 @@
 
 void GenerateFileData(int k)
 {
-    srand(time(NULL));
+    srand(static_cast<unsigned int>(time(NULL)));
 
     // Open file for writing
     ofstream NewFile("C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\data\\" + to_string(k) + ".txt");

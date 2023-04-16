@@ -2,6 +2,27 @@
 
 # v1.0
 
+### How to use
+
+#### Code editor
+
+1. Download this repository or choose to download Release V1.0, extract files and open them on your code editor.
+2. Choose one of the 5 suggested .cpp files from main directory:
+    - main.cpp
+    - list.cpp
+    - vector.cpp
+    - upgradedVector.cpp
+    - deque.cpp
+3. Choose your preferred method.
+    - Method 1: Run file you chose.
+    - Method 2: Open new terminal and write ./name (e.g.: ./main).
+4. Follow instructions in console.
+
+**IMPORTANT:**
+There are no prepared data files in this repository to work with. Before testing any program you must run **main.cpp** and choose **4. Only generate files**. Data files will be generated in *data* directory.
+
+**Exception:** file kursiokai.txt is ONLY for main.cpp "2. Read from file" function.
+
 ### New
 - Fixed wrong output for time test results (v0.5 has wrong timetable).
 - Added new version of list sort:
@@ -11,28 +32,28 @@
 
 ### Results
 
-| *updatedVector.cpp* | **1000**   | **10000**  | **100000** | **1000000** | **10000000** |
+| updatedVector.cpp | **1000**   | **10000**  | **100000** | **1000000** | **10000000** |
 |-------------------|--------|--------|--------|---------|----------|
 | Read              | 0.0238 | 0.2338 | 2.3239 | 23.194  | 247.4994 |
 | Sorted            | 0.0013 | 0.0106 | 0.1071 | 1.1229  | 9.5105   |
 | Strategy 1        | 0.0004 | 0.0038 | 0.0452 | 0.4743  | 4.9205   |
 | Strategy 2        | 0.0003 | 0.0033 | 0.0409 | 0.4087  | 4.3699   |
 
-| *vector.cpp* | **1000**   | **10000**  | **100000** | **1000000** | **10000000** |
+| vector.cpp | **1000**   | **10000**  | **100000** | **1000000** | **10000000** |
 |------------|--------|--------|----------|---------|----------|
 | Read       | 0.0232 | 0.2288 | 2.3541   | 23.1762 | 238.3179 |
 | Sorted     | 0.0013 | 0.0111 | 0.1113   | 1.155   | 9.4263   |
 | Strategy 1 | 0.0007 | 0.0075 | 0.0794   | 0.7134  | 7.2391   |
 | Strategy 2 | 0.0286 | 2.8049 | 296.1546 | -       | -        |
 
-| *list.cpp*   | **1000**   | **10000**  | **100000** | **1000000** | **10000000** |
+| list.cpp   | **1000**   | **10000**  | **100000** | **1000000** | **10000000** |
 |------------|---------|---------|---------|---------|----------|
 | Read       | 0.0261  | 0.2556  | 2.5078  | 26.4518 | 269.0197 |
 | Sorted     | 0.0001  | 0.0016  | 0.024   | 0.5897  | 8.9396   |
 | Strategy 1 | 0.0014  | 0.0147  | 0.1802  | 1.971   | 36.3856  |
 | Strategy 2 | 0.00006 | 0.00044 | 0.01436 | 0.15363 | 1.371    |
 
-| *deque.cpp*  | **1000**   | **10000**  | **100000** | **1000000** | **10000000** |
+| deque.cpp  | **1000**   | **10000**  | **100000** | **1000000** | **10000000** |
 |------------|--------|--------|--------|---------|----------|
 | Read       | 0.0288 | 0.2867 | 2.8377 | 29.1334 | 310.3281 |
 | Sorted     | 0.0024 | 0.0222 | 0.2358 | 2.4938  | 23.7652  |
@@ -43,8 +64,11 @@
 ***Note: upgradedVector.cpp is not compared to others because it uses separate algorithms.***
 
 #### Speed
-- The fastest way to sort list into two groups is by using *list* type container combined with **Strategy 2**.
-- The slowest results were using *vector* type container combined with **Strategy 2**. This result shoud have occured due to constant use of *erase* while deleting stupid students from main vector after moving them to new vector *'stupid'*.
+- **The fastest** way to sort list into two groups is by using *list* type container combined with **Strategy 2**.
+- **The slowest** results were using *vector* type container combined with **Strategy 2**. This result shoud have occured due to constant use of *erase* while deleting stupid students from main vector after moving them to new vector *'stupid'*.
+
+#### Memory
+- **Strategy 1** should appear as **the most memory consuming** way for sorting data, but it is difficult to measure difference while sorting data, since large part of the memory goes to reading and storing data into container.
 
 #### Memory
 - **Strategy 1** should appear as the most memory consuming way for sorting data, but it is difficult to measure difference while sorting data, since large part of the memory goes to reading and storing data into container.

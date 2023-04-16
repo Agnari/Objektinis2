@@ -57,7 +57,7 @@ void GatherUserData(Student &temp)
 		}
 		else if (answer == 'r' || answer == 'R')
 		{
-			srand(time(NULL));
+			srand(static_cast<unsigned int>(time(NULL)));
 
 			int g = 0;
 			cout << "Enter how many values you want to generate or symbol to continue" << endl;

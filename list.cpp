@@ -23,7 +23,7 @@ void CalcData(Student &tempLi)
         avg = 0;
     }
 
-    tempLi.finalA = (float)(0.4 * avg) + (0.6 * tempLi.exam);
+    tempLi.finalA = (float)((0.4 * avg) + (0.6 * tempLi.exam));
 
     float median = 0;
     if (!tempLi.grades.empty())
@@ -33,12 +33,12 @@ void CalcData(Student &tempLi)
         {
             auto it1 = next(tempLi.grades.begin(), tempLi.grades.size() / 2 - 1);
             auto it2 = next(tempLi.grades.begin(), tempLi.grades.size() / 2);
-            median = (float)(*it1 + *it2) / 2.0;
+            median = (float)((*it1 + *it2) / 2.0);
         }
         else
         {
             auto it = next(tempLi.grades.begin(), tempLi.grades.size() / 2);
-            median = *it;
+            median = static_cast<float>(*it);
         }
     }
     else
@@ -46,7 +46,7 @@ void CalcData(Student &tempLi)
         median = 0;
     }
 
-    tempLi.finalM = (0.4 * median) + (0.6 * tempLi.exam);
+    tempLi.finalM = (float)((0.4 * median) + (0.6 * tempLi.exam));
 }
 
 void FillStudentStruct(istringstream &line)
