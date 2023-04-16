@@ -11,15 +11,15 @@ void CalcData(Student &temp)
     float avg = 0;
     if (!temp.grades.empty())
     {
-        float sum = 0;
-        for (float grade : temp.grades)
+        int sum = 0;
+        for (int grade : temp.grades)
         {
             sum += grade;
         }
-        avg = sum / temp.grades.size();
+        avg = (float)(sum / temp.grades.size());
     }
 
-    temp.finalA = (0.4 * avg) + (0.6 * temp.exam);
+    temp.finalA = (float)((0.4 * avg) + (0.6 * temp.exam));
 
     float median = 0;
     if (!temp.grades.empty())
@@ -27,11 +27,11 @@ void CalcData(Student &temp)
         sort(temp.grades.begin(), temp.grades.end());
         if (temp.grades.size() % 2 == 0)
         {
-            median = (temp.grades[temp.grades.size() / 2 - 1] + temp.grades[temp.grades.size() / 2]) / 2.0;
+            median = (float)((temp.grades[temp.grades.size() / 2 - 1] + temp.grades[temp.grades.size() / 2]) / 2.0);
         }
         else
         {
-            median = temp.grades[temp.grades.size() / 2];
+            median = (float)(temp.grades[temp.grades.size() / 2]);
         }
     }
     else
@@ -39,7 +39,7 @@ void CalcData(Student &temp)
         median = 0;
     }
 
-    temp.finalM = (0.4 * median) + (0.6 * temp.exam);
+    temp.finalM = (float)((0.4 * median) + (0.6 * temp.exam));
 }
 
 void FillStudentStruct(istringstream &line)

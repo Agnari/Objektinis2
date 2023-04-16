@@ -1,0 +1,27 @@
+[
+{
+  "directory": "C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\headers /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\obj_main.dir\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\main.cpp",
+  "file": "C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\main.cpp"
+},
+{
+  "directory": "C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\headers /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\obj_vector.dir\\vector.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\vector.cpp",
+  "file": "C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\vector.cpp"
+},
+{
+  "directory": "C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\headers /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\obj_list.dir\\list.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\list.cpp",
+  "file": "C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\list.cpp"
+},
+{
+  "directory": "C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\headers /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\obj_deque.dir\\deque.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\deque.cpp",
+  "file": "C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\deque.cpp"
+},
+{
+  "directory": "C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build",
+  "command": "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\headers /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\obj_up_vec.dir\\upgradedVector.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\upgradedVector.cpp",
+  "file": "C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\upgradedVector.cpp"
+}
+]

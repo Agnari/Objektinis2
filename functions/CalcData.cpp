@@ -16,7 +16,7 @@ void CalcData(Student &temp)
 		avg = 0;
 	} 
 
-	temp.finalA = (float)(0.4 * avg) + (0.6 * temp.exam);
+	temp.finalA = (float)(0.4 * avg) + (float)(0.6 * temp.exam);
 
 	float median = 0;
 	if (temp.grades.size() != 0)
@@ -24,15 +24,15 @@ void CalcData(Student &temp)
 		sort(temp.grades.begin(), temp.grades.end());
 		if (temp.grades.size() % 2 == 0)
 		{
-			median = (float)(temp.grades[temp.grades.size() / 2] + temp.grades[temp.grades.size() / 2 - 1]) / 2.0;
+			median = (float)((temp.grades[temp.grades.size() / 2] + temp.grades[temp.grades.size() / 2 - 1]) / 2.0);
 		}
 		else
 		{
-			median = temp.grades[temp.grades.size() / 2];
+			median = (float)(temp.grades[temp.grades.size() / 2]);
 		};
 	}
 	else
 		(median = 0);
 
-	temp.finalM = (0.4 * median) + (0.6 * temp.exam);
+	temp.finalM = (float)((0.4 * median) + (0.6 * temp.exam));
 }

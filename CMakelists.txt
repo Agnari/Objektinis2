@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.0)
+
+project(Objektinis)
+
+# Add header files directory to include path
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/headers)
+
+# Add executable target and link against required libraries
+add_executable(obj_main main.cpp)
+add_executable(obj_vector vector.cpp)
+add_executable(obj_list list.cpp)
+add_executable(obj_deque deque.cpp)
+add_executable(obj_up_vec upgradedVector.cpp)

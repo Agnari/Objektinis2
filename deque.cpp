@@ -23,7 +23,7 @@ void CalcData(Student &tempDe)
         avg = 0;
     }
 
-    tempDe.finalA = (float)(0.4 * avg) + (0.6 * tempDe.exam);
+    tempDe.finalA = (float)((0.4 * avg) + (0.6 * tempDe.exam));
 
     float median = 0;
     if (!tempDe.grades.empty())
@@ -31,14 +31,14 @@ void CalcData(Student &tempDe)
         std::sort(tempDe.grades.begin(), tempDe.grades.end());
         if (tempDe.grades.size() % 2 == 0)
         {
-            int mid1 = tempDe.grades.size() / 2 - 1;
-            int mid2 = tempDe.grades.size() / 2;
-            median = (float)(tempDe.grades[mid1] + tempDe.grades[mid2]) / 2.0;
+            int mid1 = static_cast<int>(tempDe.grades.size() / 2 - 1);
+            int mid2 = static_cast<int>(tempDe.grades.size() / 2);
+            median = (float)((tempDe.grades[mid1] + tempDe.grades[mid2]) / 2.0);
         }
         else
         {
-            int mid = tempDe.grades.size() / 2;
-            median = tempDe.grades[mid];
+            int mid = static_cast<int>(tempDe.grades.size() / 2);
+            median = static_cast<float>(tempDe.grades[mid]);
         }
     }
     else
@@ -46,7 +46,7 @@ void CalcData(Student &tempDe)
         median = 0;
     }
 
-    tempDe.finalM = (0.4 * median) + (0.6 * tempDe.exam);
+    tempDe.finalM = (float)((0.4 * median) + (0.6 * tempDe.exam));
 }
 
 void FillStudentStruct(istringstream &line)

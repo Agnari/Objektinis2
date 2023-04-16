@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Objektinis",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "obj_deque::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-obj_deque-Debug-eba04ab4a697ece5b7be.json",
+					"name" : "obj_deque",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "obj_list::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-obj_list-Debug-800e29060fe5f40ee356.json",
+					"name" : "obj_list",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "obj_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-obj_main-Debug-54d4368229ae8ba6a8c7.json",
+					"name" : "obj_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "obj_up_vec::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-obj_up_vec-Debug-7fcf7268ae3266118061.json",
+					"name" : "obj_up_vec",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "obj_vector::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-obj_vector-Debug-33073a9960a6a740643e.json",
+					"name" : "obj_vector",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Home/OneDrive/Documents/GitHub/Objektinis/build",
+		"source" : "C:/Users/Home/OneDrive/Documents/GitHub/Objektinis"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
