@@ -1,7 +1,7 @@
 #include "./headers/Mylib.h"
 #include "./headers/Student.h"
 #include "./headers/Answers.h"
-#include "./headers/Functions.h"
+#include "./main_functions.cpp"
 
 int main()
 {
