@@ -1,5 +1,53 @@
 # Objektinis
 
+# v1.1
+
+### Changes
+
+- All previous versions are disabled. Only most optimized version upgradedVector.cpp left.
+- Struct Student is now re-made into class Student.
+- All code adapted for class.
+- All functions moved to functions.cpp.
+- File generator moved to upgradedVector.cpp.
+
+**IMPORTANT:** before generating files, make sure you have folder called _"data"_ in your main directory.
+
+### Struct vs Class
+
+| **Struct**  | **1000**   | **10000**  | **100000** | **1000000** | **10000000** |
+|-------------------|--------|--------|--------|---------|----------|
+| Read    | 0.0238 | 0.2338 | 2.3239 | 23.194  | 247.4994 |
+| Sorted  | 0.0013 | 0.0106 | 0.1071 | 1.1229  | 9.5105   |
+| Split   | 0.0003 | 0.0033 | 0.0409 | 0.4087  | 4.3699   |
+
+| **Class**   | **1000**   | **10000**  | **100000** | **1000000** | **10000000** |
+|---------|----------|----------|----------|----------|----------|
+| Read    | 0.0285   | 0.2101   | 2.1162   | 22.6780  | 237.7867 |
+| Sorted  | 0.000015 | 0.000126 | 0.001244 | 0.012948 | 0.130576 |
+| Split   | 0.0004   | 0.0034   | 0.0366   | 0.3705   | 3.7167   |
+
+### Testing flags
+
+This code was tested using ***cl compiler***.
+
+| **O1**  | **1000** | **10000** | **100000** | **1000000** | **10000000** |
+|---------|----------|-----------|------------|-------------|--------------|
+| Read    | 0.0098   | 0.0675    | 0.6808     | 6.8872      | 72.6603      |
+| Sorted  | 0.000007 | 0.000044  | 0.000625   | 0.004931    | 0.050091     |
+| Split   | 0.0001   | 0.0009    | 0.0084     | 0.0958      | 0.8615       |
+
+| **O2**  | **1000** | **10000** | **100000** | **1000000** | **10000000** |
+|---------|----------|-----------|------------|-------------|--------------|
+| Read    | 0.007    | 0.0680    | 0.6602     | 6.7354      | 71.7778      |
+| Sorted  | 0.000008 | 0.000044  | 0.000479   | 0.00446     | 0.052247     |
+| Split   | 0.0001   | 0.001     | 0.0097     | 0.0869      | 0.9049       |
+
+| **Ox** | **1000** | **10000** | **100000** | **1000000** | **10000000** |
+|--------|----------|-----------|------------|-------------|--------------|
+| Read   | 0.0087   | 0.0683    | 0.6475     | 6.5907      | 72.6530      |
+| Sorted | 0.000006 | 0.000046  | 0.000534   | 0.004671    | 0.053582     |
+| Split  | 0.0001   | 0.001     | 0.0085     | 0.0895      | 0.9478       |
+
 # v1.0
 
 ### How to use
@@ -24,6 +72,7 @@ There are no prepared data files in this repository to work with. Before testing
 **Exception:** file kursiokai.txt is ONLY for main.cpp "2. Read from file" function.
 
 ### New
+
 - Fixed wrong output for time test results (v0.5 has wrong timetable).
 - Added new version of list sort:
     - **Version 1:** main vector with data sorts into two new vectors *'smart'* and *'stupid'*.
@@ -64,18 +113,23 @@ There are no prepared data files in this repository to work with. Before testing
 ***Note: upgradedVector.cpp is not compared to others because it uses separate algorithms.***
 
 #### Speed
+
 - **The fastest** way to sort list into two groups is by using *list* type container combined with **Strategy 2**.
 - **The slowest** results were using *vector* type container combined with **Strategy 2**. This result shoud have occured due to constant use of *erase* while deleting stupid students from main vector after moving them to new vector *'stupid'*.
 
 #### Memory
+
 - **Strategy 1** should appear as **the most memory consuming** way for sorting data, but it is difficult to measure difference while sorting data, since large part of the memory goes to reading and storing data into container.
 
 # v0.5
+
 ### Changes
+
 - vector.cpp now renamed into main.cpp.
 - updated Student.h.
 
 ### New
+
 - Added new structs in _LiStudent.h_ (for **list<>**) and _DeStudent.h_ (for **deque<>**).
 - Added new files:
     - _vector.cpp_ for **vector<>** type container solution.
@@ -84,7 +138,9 @@ There are no prepared data files in this repository to work with. Before testing
 - **Warning:** files should be genereated in _main.cpp_ for new version functionality.
 
 ### Testing
+
 #### System parameters
+
 - CPU: 2.60GHz, 2592 Mhz, 6 Core(s), 12 Logical Processor(s); 
 - RAM: 32.0 GB;
 - SSD: 476 GB;
@@ -110,12 +166,15 @@ There are no prepared data files in this repository to work with. Before testing
 | Sorted into<br>smart and stupid | 0,038182024 | 0,345921990 | 3,3893215488 | 35,54372514330 | 320,602523622130 |
 
 # v0.4
+
 ### Updates
+
 - Some functions now separated into new cpp files.
 - Updated *"Mylib.h"*.
 - Global variable _finaltype_ is now in *"Answers.h"*.
 
 ### New
+
 - Added new **file generator**, which uses buffer.
 - Added new **struct Answers** in header file *"Answers.h"*, for storing settings.
 - New function Settings now allows to choose how to work with data.
@@ -130,7 +189,9 @@ There are no prepared data files in this repository to work with. Before testing
 | Program duration                     | 372,5057                        |
 
 # v0.3
+
 ### Updates
+
 - All functions separated into different **cpp** files. Files are stored in _"functions"_ folder.
 - **Struct Student** moved to header file _"Student.h"_.
 - **#include** of all functions stored in header file _"Functions.h"_.
@@ -140,14 +201,18 @@ There are no prepared data files in this repository to work with. Before testing
 - _Notes.md_ moved to _"ReadOnly"_ folder.
 
 # v0.2
+
 ### Updates
+
 - Updated _"Mylib.h"_.
 - **Struct Student** now has variables for both average and median final grades.
 - Moved Local variables to Global:
     - _vector<Student> Group_.
     - _Student temp_.
 - Output shows both **FinalMedian** and **FinalAverage** columns.
+
 ### New
+
 - Added file reading functions:
     - _GatherFileData_.
     - _CountRows_.
@@ -158,6 +223,7 @@ There are no prepared data files in this repository to work with. Before testing
     - _sort_ (int main).
 
 # v0.1
+
 This version has two subversions: with C array (_carray.cpp_) and with Vector type array (_vector.cpp_).
 ***Vector subversion will be used for further development.***
 Both solutions supported by _Mylib.h_.
