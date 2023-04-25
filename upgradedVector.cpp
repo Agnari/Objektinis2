@@ -1,178 +1,61 @@
 #include "./headers/Mylib.h"
 #include "./headers/Student.h"
-
-bool Compare(const Student &a, const Student &b)
-{
-    return a.finalA < b.finalA;
-}
-
-void CalcData(Student &temp)
-{
-    float avg = 0;
-    if (!temp.grades.empty())
-    {
-        int sum = 0;
-        for (int grade : temp.grades)
-        {
-            sum += grade;
-        }
-        avg = (float)(sum / temp.grades.size());
-    }
-
-    temp.finalA = (float)((0.4 * avg) + (0.6 * temp.exam));
-
-    float median = 0;
-    if (!temp.grades.empty())
-    {
-        sort(temp.grades.begin(), temp.grades.end());
-        if (temp.grades.size() % 2 == 0)
-        {
-            median = (float)((temp.grades[temp.grades.size() / 2 - 1] + temp.grades[temp.grades.size() / 2]) / 2.0);
-        }
-        else
-        {
-            median = (float)(temp.grades[temp.grades.size() / 2]);
-        }
-    }
-    else
-    {
-        median = 0;
-    }
-
-    temp.finalM = (float)((0.4 * median) + (0.6 * temp.exam));
-}
-
-void FillStudentStruct(istringstream &line)
-{
-    line >> temp.name >> temp.surname;
-    int grade = 0;
-    for (int j = 0; j < 10; j++)
-    {
-        line >> grade;
-        if (grade >= 1 && grade <= 10)
-        {
-            temp.grades.push_back(grade);
-        }
-        else
-        {
-            throw "Bad data format in file";
-        }
-    }
-
-    int exam;
-    line >> exam;
-    if (exam >= 1 && exam <= 10)
-    {
-        temp.exam = exam;
-    }
-    else
-    {
-        throw "Data in file must contain name, surname, homework grades and exam grade. Please, check your file.";
-    }
-
-    CalcData(temp);
-    Group.push_back(temp);
-    temp.exam = NULL;
-    temp.grades.clear();
-}
-
-void Read(int k)
-{
-
-    string filename = "C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis\\data\\" + to_string(k) + ".txt";
-    string header;
-    ifstream readf(filename);
-    getline(readf, header);
-    string line;
-
-    while (getline(readf, line))
-    {
-        istringstream x(line);
-        FillStudentStruct(x);
-    }
-
-    readf.close();
-}
-
-void TwoGroups()
-{
-    auto is_smart = [](const Student &s)
-    { return s.finalA > 5; };
-    auto middle = partition(Group.begin(), Group.end(), is_smart);
-
-    vector<Student> new_smart(middle, Group.end());
-    vector<Student> new_stupid(Group.begin(), middle);
-
-    Smart = move(new_smart);
-    Stupid = move(new_stupid);
-}
-
-void OneNewGroup()
-{
-    auto is_stupid = [](const Student &s)
-    { return s.finalA < 5; };
-    auto middle = partition(Group.begin(), Group.end(), is_stupid);
-
-    vector<Student> new_stupid(Group.begin(), middle);
-    Stupid.insert(Stupid.end(), new_stupid.begin(), new_stupid.end());
-
-    Group.erase(Group.begin(), middle);
-}
+#include "./functions.cpp"
 
 int main()
 {
-    int str = 0;
-    cout << "Choose strategy (1-2):" << endl;
-    cout << "Strategy 1: split list of students into two groups 'smart' and 'stupid" << endl;
-    cout << "Strategy 2: sort stupid students into new list 'stupid'." << endl;
-    cin >> str;
-    while (str != 1 && str != 2)
+    // Options-------------------------------------------------
+    int answ = 0;
+    cout << "Choose option (1-2):" << endl;
+    cout << "1. Generate new files for work." << endl;
+    cout << "2. Work with existing files." << endl;
+    cin >> answ;
+    while (answ != 1 && answ != 2 && answ != 3 && answ != 4)
     {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "Wrong answer." << endl;
-        cout << "Choose strategy (1-2):" << endl;
-        cout << "Strategy 1: split list of students into two groups 'smart' and 'stupid" << endl;
-        cout << "Strategy 2: sort stupid students into new list 'stupid'." << endl;
-        cin >> str;
+        cout << "There is no such answer." << endl;
+        cout << "----------------------------------------" << endl;
+        cout << "Choose option (1-3):" << endl;
+        cout << "1. Generate new files for work." << endl;
+        cout << "2. Work with existing files." << endl;
+        cin >> answ;
     };
+
+    // New files-----------------------------------------------
+    if (answ == 1)
+    {
+        int f = 1000;
+        for (int i = 0; i < 5; i++)
+        {
+            GenerateFileData(f);
+            f = f * 10;
+            cout << "." << endl;
+        }
+    }
 
     int k = 1000;
     for (int i = 0; i < 5; i++)
     {
         auto start1 = high_resolution_clock::now();
-        Read(k);
+        Read(k, Group);
         auto stop1 = high_resolution_clock::now();
         auto duration1 = duration_cast<microseconds>(stop1 - start1);
         cout << "File " << k << ".txt read in: " << fixed << setprecision(4) << duration1.count() / 1000000.0 << " seconds" << endl;
         cout << endl;
 
         auto start2 = high_resolution_clock::now();
-        sort(Group.begin(), Group.end(), Compare);
+        sort(Group.begin(), Group.end());
         auto stop2 = high_resolution_clock::now();
         auto duration2 = duration_cast<microseconds>(stop2 - start2);
-        cout << "File " << k << ".txt sorted by grade: " << fixed << setprecision(4) << duration2.count() / 1000000.0 << " seconds" << endl;
+        cout << "File " << k << ".txt sorted by grade: " << fixed << setprecision(7) << duration2.count() / 1000000.0 << " seconds" << endl;
         cout << endl;
 
-        if (str == 1)
-        {
-            cout << "Strategy 1:" << endl;
-            auto start3 = high_resolution_clock::now();
-            TwoGroups();
-            auto stop3 = high_resolution_clock::now();
-            auto duration3 = duration_cast<microseconds>(stop3 - start3);
-            cout << "File " << k << ".txt sorted into smart and stupid in: " << fixed << setprecision(4) << duration3.count() / 1000000.0 << " seconds" << endl;
-            cout << endl;
-        }
-        else if (str == 2)
-        {
-            cout << "Strategy 2:" << endl;
-            auto start4 = high_resolution_clock::now();
-            OneNewGroup();
-            auto stop4 = high_resolution_clock::now();
-            auto duration4 = duration_cast<microseconds>(stop4 - start4);
-            cout << "File " << k << ".txt sorted into stupid in: " << fixed << setprecision(4) << duration4.count() / 1000000.0 << " seconds" << endl;
-        }
+        auto start4 = high_resolution_clock::now();
+        OneNewGroup(Group, Stupid);
+        auto stop4 = high_resolution_clock::now();
+        auto duration4 = duration_cast<microseconds>(stop4 - start4);
+        cout << "File " << k << ".txt sorted into stupid in: " << fixed << setprecision(4) << duration4.count() / 1000000.0 << " seconds" << endl;
 
         Group.clear();
 
