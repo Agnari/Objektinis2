@@ -44,11 +44,20 @@ private:
 	}
 
 public:
-	Student(string _name, string _surname, vector<int> &&grades, int exam)
+	Student(string _name, string _surname, vector<int> &_grades, int _exam)
 	{
 		name = _name;
 		surname = _surname;
+		grades = move(_grades);
+		exam = _exam;
 	}
+
+	// Student(string _name = "name", string _surname = "surname")
+	// {
+	// 	name = _name;
+	// 	surname = _surname;
+	// }
+
 	void editNameSurname(string name, string surname)
 	{
 		this->name = name;
@@ -75,6 +84,8 @@ public:
 
 	friend void FillStudentStruct(istringstream &line, vector<Student> &Group);
 	friend void OneNewGroup(vector<Student> &Group, vector<Student> &Stupid);
+
+	
 };
 vector<Student> Group;
 vector<Student> Stupid;

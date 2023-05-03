@@ -22,7 +22,7 @@ void FillStudentStruct(istringstream &line, vector<Student> &Group, vector<int> 
     line >> exam;
     if (exam >= 1 && exam <= 10)
     {
-        Student student(name, surname, move(grades), exam);
+        Student student(name, surname, grades, exam);
         Group.push_back(student);
     }
     else
