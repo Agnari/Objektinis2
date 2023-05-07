@@ -105,14 +105,72 @@ void GenerateFileData(int f)
     newFile.close();
 }
 
-void OneNewGroup(vector<Student> &Group, vector<Student> &Stupid)
+void OneNewGroup(vector<Student>& Group, vector<Student>& Stupid)
 {
-    auto is_stupid = [](const Student &s)
-    { return s.finalA < 5; };
+    auto is_stupid = [](const Student& s)
+    {
+        return s.getFinalA() < 5;
+    };
+
     auto middle = partition(Group.begin(), Group.end(), is_stupid);
 
-    vector<Student> new_stupid(Group.begin(), middle);
-    Stupid.insert(Stupid.end(), new_stupid.begin(), new_stupid.end());
+    vector<Student> new_stupid(make_move_iterator(Group.begin()), make_move_iterator(middle));
+    Stupid.insert(Stupid.end(), make_move_iterator(new_stupid.begin()), make_move_iterator(new_stupid.end()));
 
     Group.erase(Group.begin(), middle);
+}
+
+void NewStupidSmartTxt()
+{
+    stringstream stupid(stringstream::out | stringstream::binary);
+    stringstream smart(stringstream::out | stringstream::binary);
+    //------------------------------------------HEADERS---------------------------------------------------------------------------------------------------
+    stupid << left << setw(20) << "Name" << left << setw(20) << "Surname" << left << setw(15) << "Final(avg)" << left << setw(15) << "Final(med)" << endl;
+    stupid << "-------------------------------------------------------------------" << endl;
+
+    smart << left << setw(20) << "Name" << left << setw(20) << "Surname" << left << setw(15) << "Final(avg)" << left << setw(15) << "Final(med)" << endl;
+    smart << "-------------------------------------------------------------------" << endl;
+    //---------------------------------------------------------------------------------------------------------------------------------------------------
+
+    for (const auto &student : Group)
+    {
+        smart << left << setw(20) << student.name << left << setw(20) << student.surname << left << setw(15) << student.finalA << left << setw(15) << student.finalM << endl;
+    }
+    for (const auto &student : Stupid)
+    {
+        stupid << left << setw(20) << student.name << left << setw(20) << student.surname << left << setw(15) << student.finalA << left << setw(15) << student.finalM << endl;
+    }
+
+    ofstream txtFile;
+    txtFile.open("C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis2\\data\\stupid.txt", ofstream::binary);
+    txtFile.write(stupid.str().c_str(), stupid.str().length());
+    txtFile.close();
+
+    txtFile.open("C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis2\\data\\smart.txt", ofstream::binary);
+    txtFile.write(smart.str().c_str(), smart.str().length());
+    txtFile.close();
+}
+
+void StupidSmartTxt()
+{
+    stringstream stupid(stringstream::out | stringstream::binary);
+    stringstream smart(stringstream::out | stringstream::binary);
+
+    for (const auto &student : Group)
+    {
+        smart << left << setw(20) << student.name << left << setw(20) << student.surname << left << setw(15) << student.finalA << left << setw(15) << student.finalM << endl;
+    }
+    for (const auto &student : Stupid)
+    {
+        stupid << left << setw(20) << student.name << left << setw(20) << student.surname << left << setw(15) << student.finalA << left << setw(15) << student.finalM << endl;
+    }
+
+    ofstream txtFile;
+    txtFile.open("C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis2\\data\\stupid.txt", ofstream::binary);
+    txtFile.write(stupid.str().c_str(), stupid.str().length());
+    txtFile.close();
+
+    txtFile.open("C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis2\\data\\smart.txt", ofstream::binary);
+    txtFile.write(smart.str().c_str(), smart.str().length());
+    txtFile.close();
 }

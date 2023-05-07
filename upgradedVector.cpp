@@ -26,7 +26,7 @@ int main()
     if (answ == 1)
     {
         int f = 1000;
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 2; i++)
         {
             GenerateFileData(f);
             f = f * 10;
@@ -35,7 +35,7 @@ int main()
     }
 
     int k = 1000;
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 2; i++)
     {
         auto start1 = high_resolution_clock::now();
         Read(k, Group);
@@ -56,6 +56,13 @@ int main()
         auto stop4 = high_resolution_clock::now();
         auto duration4 = duration_cast<microseconds>(stop4 - start4);
         cout << "File " << k << ".txt sorted into stupid in: " << fixed << setprecision(4) << duration4.count() / 1000000.0 << " seconds" << endl;
+
+        if(i == 0){
+            NewStupidSmartTxt();
+        }
+        else{
+            StupidSmartTxt();
+        }
 
         Group.clear();
 
