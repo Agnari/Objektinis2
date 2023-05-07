@@ -1,5 +1,13 @@
 # Objektinis
 
+# v1.2
+
+### Changes
+
+- *Stupid.txt* and *Smart.txt* created after sorting two vectors.
+- Students sorted by FinalAverage and then FinalMedian results.
+- **Class Student** is set according to the rule of five. Copy constructors are not used though.
+
 # v1.1
 
 ### Changes
