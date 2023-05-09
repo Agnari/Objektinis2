@@ -1,5 +1,12 @@
 # Objektinis
 
+# v1.5
+
+### Changes
+
+- Created new abstract **base class Human**.
+- Class Student is now **Derived**.
+
 # v1.2
 
 ### Changes
