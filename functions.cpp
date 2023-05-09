@@ -33,7 +33,6 @@ void FillStudentStruct(istringstream &line, vector<Student> &Group, vector<int> 
 
 void Read(int k, vector<Student> &Group)
 {
-
     string filename = "C:\\Users\\Home\\OneDrive\\Documents\\GitHub\\Objektinis2\\data\\" + to_string(k) + ".txt";
     string header;
     ifstream readf(filename);
@@ -105,9 +104,9 @@ void GenerateFileData(int f)
     newFile.close();
 }
 
-void OneNewGroup(vector<Student>& Group, vector<Student>& Stupid)
+void OneNewGroup(vector<Student> &Group, vector<Student> &Stupid)
 {
-    auto is_stupid = [](const Student& s)
+    auto is_stupid = [](const Student &s)
     {
         return s.getFinalA() < 5;
     };

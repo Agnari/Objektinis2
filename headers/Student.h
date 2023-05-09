@@ -3,13 +3,38 @@
 #include <algorithm>
 #include <sstream>
 
-using namespace std;
+//----------------BASE----------------
+class Human
+{
+protected:
+	string name, surname;
 
-class Student
+public:
+	Human(string _name, string _surname)
+	{
+		name = _name;
+		surname = _surname;
+	}
+
+	Human()
+	{
+		name = "";
+		surname = "";
+	}
+
+	virtual ~Human()
+	{
+		name.clear();
+		surname.clear();
+	}
+
+	virtual void introduce() = 0;
+};
+
+//----------------DERIVED----------------
+class Student : public Human
 {
 private:
-	string name;
-	string surname;
 	vector<int> grades;
 	int exam;
 	float finalM;
@@ -58,15 +83,15 @@ public:
 	Student() = default;
 
 	// Constructor with arguments
-	Student(string _name, string _surname, vector<int> _grades, int _exam)
-		: name{move(_name)}, surname{move(_surname)}, grades{move(_grades)}, exam{_exam}
-	{
-		CalcData();
-	}
+	 Student(string _name, string _surname, vector<int> _grades, int _exam)
+        : Human(move(_name), move(_surname)), grades{move(_grades)}, exam{_exam}
+    {
+        CalcData();
+    }
 
 	// Copy constructor
 	Student(const Student &other)
-		: name{other.name}, surname{other.surname}, grades{other.grades}, exam{other.exam}, finalM{other.finalM}, finalA{other.finalA}
+		: Human(other.name, other.surname), grades{other.grades}, exam{other.exam}, finalM{other.finalM}, finalA{other.finalA}
 	{
 	}
 
@@ -75,8 +100,7 @@ public:
 	{
 		if (this != &other)
 		{
-			name = other.name;
-			surname = other.surname;
+			Human::operator=(other);
 			grades = other.grades;
 			exam = other.exam;
 			finalM = other.finalM;
@@ -88,7 +112,7 @@ public:
 
 	// Move constructor
 	Student(Student &&other) noexcept
-		: name{std::move(other.name)}, surname{std::move(other.surname)}, grades{std::move(other.grades)}, exam{other.exam}, finalM{other.finalM}, finalA{other.finalA}
+		: Human(move(other)), grades{move(other.grades)}, exam{other.exam}, finalM{other.finalM}, finalA{other.finalA}
 	{
 	}
 
@@ -97,9 +121,8 @@ public:
 	{
 		if (this != &other)
 		{
-			name = std::move(other.name);
-			surname = std::move(other.surname);
-			grades = std::move(other.grades);
+			Human::operator=(std::move(other));
+			grades = move(other.grades);
 			exam = other.exam;
 			finalM = other.finalM;
 			finalA = other.finalA;
@@ -125,10 +148,15 @@ public:
 		}
 	}
 
+	void introduce() override {
+        cout << "My name is " << name << " " << surname << ", and I'm a student." << endl;
+    }
+
 	friend void FillStudentStruct(std::istringstream &line, std::vector<Student> &Group);
 	friend void OneNewGroup(std::vector<Student> &Group, std::vector<Student> &Stupid);
 	friend void NewStupidSmartTxt();
 	friend void StupidSmartTxt();
 };
+
 vector<Student> Group;
 vector<Student> Stupid;

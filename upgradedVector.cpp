@@ -57,10 +57,12 @@ int main()
         auto duration4 = duration_cast<microseconds>(stop4 - start4);
         cout << "File " << k << ".txt sorted into stupid in: " << fixed << setprecision(4) << duration4.count() / 1000000.0 << " seconds" << endl;
 
-        if(i == 0){
+        if (i == 0)
+        {
             NewStupidSmartTxt();
         }
-        else{
+        else
+        {
             StupidSmartTxt();
         }
 
