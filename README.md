@@ -1,4 +1,10 @@
-# Objektinis
+# README
+
+# v2.0
+
+### New
+
+- Added doxygen documentation
 
 # v1.5
 

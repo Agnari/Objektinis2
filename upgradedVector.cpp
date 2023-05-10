@@ -1,3 +1,13 @@
+/**
+ * @file upgradedVector.cpp
+ * @author Agnari
+ * @brief 
+ * @version 0.1
+ * @date 2023-05-10
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #include "./headers/Mylib.h"
 #include "./headers/Student.h"
 #include "./functions.cpp"
