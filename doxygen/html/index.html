@@ -64,33 +64,51 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_C__Users_Home_OneDrive_Documents_GitHub_Objektinis2_README"></a> </p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-v2.0</h1>
+<h2><a class="anchor" id="autotoc_md1"></a>
+How to use</h2>
 <h3><a class="anchor" id="autotoc_md2"></a>
-Changes</h3>
+Code editor</h3>
+<ol type="1">
+<li>Download this repository or choose to download Release V2.0, extract files and open them on your code editor.</li>
+<li>Choose open <a class="el" href="upgraded_vector_8cpp.html">upgradedVector.cpp</a></li>
+<li>Choose your preferred method.<ul>
+<li>Method 1: Run file you chose.</li>
+<li>Method 2: Open new terminal and write ./upgradedVector.</li>
+</ul>
+</li>
+<li>Follow instructions in console.</li>
+</ol>
+<p><b>IMPORTANT:</b></p><ul>
+<li>Empty folder "data" is used for data files storage.</li>
+<li>First time running program choose option 1: Generate new files for work.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+v2.0</h1>
+<h3><a class="anchor" id="autotoc_md4"></a>
+New</h3>
 <ul>
 <li>Added doxygen documentation</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 v1.5</h1>
-<h3><a class="anchor" id="autotoc_md4"></a>
+<h3><a class="anchor" id="autotoc_md6"></a>
 Changes</h3>
 <ul>
 <li>Created new abstract <b>base class <a class="el" href="class_human.html" title="The base class representing a human.">Human</a></b>.</li>
 <li>Class <a class="el" href="class_student.html" title="The derived class representing a student.">Student</a> is now <b>Derived</b>.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 v1.2</h1>
-<h3><a class="anchor" id="autotoc_md6"></a>
+<h3><a class="anchor" id="autotoc_md8"></a>
 Changes</h3>
 <ul>
 <li><em>Stupid.txt</em> and <em>Smart.txt</em> created after sorting two vectors.</li>
 <li>Students sorted by FinalAverage and then FinalMedian results.</li>
 <li><b>Class <a class="el" href="class_student.html" title="The derived class representing a student.">Student</a></b> is set according to the rule of five. Copy constructors are not used though.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 v1.1</h1>
-<h3><a class="anchor" id="autotoc_md8"></a>
+<h3><a class="anchor" id="autotoc_md10"></a>
 Changes</h3>
 <ul>
 <li>All previous versions are disabled. Only most optimized version <a class="el" href="upgraded_vector_8cpp.html">upgradedVector.cpp</a> left.</li>
@@ -100,11 +118,12 @@ Changes</h3>
 <li>File generator moved to <a class="el" href="upgraded_vector_8cpp.html">upgradedVector.cpp</a>.</li>
 </ul>
 <p><b>IMPORTANT:</b> before generating files, make sure you have folder called _"data"_ in your main directory.</p>
-<h3><a class="anchor" id="autotoc_md9"></a>
+<h3><a class="anchor" id="autotoc_md11"></a>
 Struct vs Class</h3>
+<p><em><b>Time measured in seconds</b></em></p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone"><b>Struct</b>   </th><th class="markdownTableHeadNone"><b>1000</b>   </th><th class="markdownTableHeadNone"><b>10000</b>   </th><th class="markdownTableHeadNone"><b>100000</b>   </th><th class="markdownTableHeadNone"><b>1000000</b>   </th><th class="markdownTableHeadNone"><b>10000000</b>    </th></tr>
+<th class="markdownTableHeadNone"><b>Struct</b>   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0.0238   </td><td class="markdownTableBodyNone">0.2338   </td><td class="markdownTableBodyNone">2.3239   </td><td class="markdownTableBodyNone">23.194   </td><td class="markdownTableBodyNone">247.4994    </td></tr>
 <tr class="markdownTableRowEven">
@@ -114,7 +133,7 @@ Struct vs Class</h3>
 </table>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone"><b>Class</b>   </th><th class="markdownTableHeadNone"><b>1000</b>   </th><th class="markdownTableHeadNone"><b>10000</b>   </th><th class="markdownTableHeadNone"><b>100000</b>   </th><th class="markdownTableHeadNone"><b>1000000</b>   </th><th class="markdownTableHeadNone"><b>10000000</b>    </th></tr>
+<th class="markdownTableHeadNone"><b>Class</b>   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0.0285   </td><td class="markdownTableBodyNone">0.2101   </td><td class="markdownTableBodyNone">2.1162   </td><td class="markdownTableBodyNone">22.6780   </td><td class="markdownTableBodyNone">237.7867    </td></tr>
 <tr class="markdownTableRowEven">
@@ -122,12 +141,13 @@ Struct vs Class</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Split   </td><td class="markdownTableBodyNone">0.0004   </td><td class="markdownTableBodyNone">0.0034   </td><td class="markdownTableBodyNone">0.0366   </td><td class="markdownTableBodyNone">0.3705   </td><td class="markdownTableBodyNone">3.7167   </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md10"></a>
+<h3><a class="anchor" id="autotoc_md12"></a>
 Testing flags</h3>
 <p>This code was tested using <em><b>cl compiler</b></em>.</p>
+<p><em><b>Time measured in seconds</b></em></p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone"><b>O1</b>   </th><th class="markdownTableHeadNone"><b>1000</b>   </th><th class="markdownTableHeadNone"><b>10000</b>   </th><th class="markdownTableHeadNone"><b>100000</b>   </th><th class="markdownTableHeadNone"><b>1000000</b>   </th><th class="markdownTableHeadNone"><b>10000000</b>    </th></tr>
+<th class="markdownTableHeadNone"><b>O1</b>   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0.0098   </td><td class="markdownTableBodyNone">0.0675   </td><td class="markdownTableBodyNone">0.6808   </td><td class="markdownTableBodyNone">6.8872   </td><td class="markdownTableBodyNone">72.6603    </td></tr>
 <tr class="markdownTableRowEven">
@@ -137,7 +157,7 @@ Testing flags</h3>
 </table>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone"><b>O2</b>   </th><th class="markdownTableHeadNone"><b>1000</b>   </th><th class="markdownTableHeadNone"><b>10000</b>   </th><th class="markdownTableHeadNone"><b>100000</b>   </th><th class="markdownTableHeadNone"><b>1000000</b>   </th><th class="markdownTableHeadNone"><b>10000000</b>    </th></tr>
+<th class="markdownTableHeadNone"><b>O2</b>   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0.007   </td><td class="markdownTableBodyNone">0.0680   </td><td class="markdownTableBodyNone">0.6602   </td><td class="markdownTableBodyNone">6.7354   </td><td class="markdownTableBodyNone">71.7778    </td></tr>
 <tr class="markdownTableRowEven">
@@ -147,7 +167,7 @@ Testing flags</h3>
 </table>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone"><b>Ox</b>   </th><th class="markdownTableHeadNone"><b>1000</b>   </th><th class="markdownTableHeadNone"><b>10000</b>   </th><th class="markdownTableHeadNone"><b>100000</b>   </th><th class="markdownTableHeadNone"><b>1000000</b>   </th><th class="markdownTableHeadNone"><b>10000000</b>    </th></tr>
+<th class="markdownTableHeadNone"><b>Ox</b>   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0.0087   </td><td class="markdownTableBodyNone">0.0683   </td><td class="markdownTableBodyNone">0.6475   </td><td class="markdownTableBodyNone">6.5907   </td><td class="markdownTableBodyNone">72.6530    </td></tr>
 <tr class="markdownTableRowEven">
@@ -155,11 +175,11 @@ Testing flags</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Split   </td><td class="markdownTableBodyNone">0.0001   </td><td class="markdownTableBodyNone">0.001   </td><td class="markdownTableBodyNone">0.0085   </td><td class="markdownTableBodyNone">0.0895   </td><td class="markdownTableBodyNone">0.9478   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<h1><a class="anchor" id="autotoc_md13"></a>
 v1.0</h1>
-<h3><a class="anchor" id="autotoc_md12"></a>
+<h3><a class="anchor" id="autotoc_md14"></a>
 How to use</h3>
-<h4><a class="anchor" id="autotoc_md13"></a>
+<h4><a class="anchor" id="autotoc_md15"></a>
 Code editor</h4>
 <ol type="1">
 <li>Download this repository or choose to download Release V1.0, extract files and open them on your code editor.</li>
@@ -180,7 +200,7 @@ Code editor</h4>
 </ol>
 <p><b>IMPORTANT:</b> There are no prepared data files in this repository to work with. Before testing any program you must run <b>main.cpp</b> and choose <b>4. Only generate files</b>. Data files will be generated in <em>data</em> directory.</p>
 <p><b>Exception:</b> file kursiokai.txt is ONLY for main.cpp "2. Read from file" function.</p>
-<h3><a class="anchor" id="autotoc_md14"></a>
+<h3><a class="anchor" id="autotoc_md16"></a>
 New</h3>
 <ul>
 <li>Fixed wrong output for time test results (v0.5 has wrong timetable).</li>
@@ -191,11 +211,12 @@ New</h3>
 </li>
 <li>Created <a class="el" href="upgraded_vector_8cpp.html">upgradedVector.cpp</a> that uses algorithms std::partition and std::stable_partition to make program faster.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md15"></a>
+<h3><a class="anchor" id="autotoc_md17"></a>
 Results</h3>
+<p><em><b>Time measured in seconds</b></em></p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">updatedVector.cpp   </th><th class="markdownTableHeadNone"><b>1000</b>   </th><th class="markdownTableHeadNone"><b>10000</b>   </th><th class="markdownTableHeadNone"><b>100000</b>   </th><th class="markdownTableHeadNone"><b>1000000</b>   </th><th class="markdownTableHeadNone"><b>10000000</b>    </th></tr>
+<th class="markdownTableHeadNone">updatedVector.cpp   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0.0238   </td><td class="markdownTableBodyNone">0.2338   </td><td class="markdownTableBodyNone">2.3239   </td><td class="markdownTableBodyNone">23.194   </td><td class="markdownTableBodyNone">247.4994    </td></tr>
 <tr class="markdownTableRowEven">
@@ -207,7 +228,7 @@ Results</h3>
 </table>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">vector.cpp   </th><th class="markdownTableHeadNone"><b>1000</b>   </th><th class="markdownTableHeadNone"><b>10000</b>   </th><th class="markdownTableHeadNone"><b>100000</b>   </th><th class="markdownTableHeadNone"><b>1000000</b>   </th><th class="markdownTableHeadNone"><b>10000000</b>    </th></tr>
+<th class="markdownTableHeadNone">vector.cpp   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0.0232   </td><td class="markdownTableBodyNone">0.2288   </td><td class="markdownTableBodyNone">2.3541   </td><td class="markdownTableBodyNone">23.1762   </td><td class="markdownTableBodyNone">238.3179    </td></tr>
 <tr class="markdownTableRowEven">
@@ -219,7 +240,7 @@ Results</h3>
 </table>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">list.cpp   </th><th class="markdownTableHeadNone"><b>1000</b>   </th><th class="markdownTableHeadNone"><b>10000</b>   </th><th class="markdownTableHeadNone"><b>100000</b>   </th><th class="markdownTableHeadNone"><b>1000000</b>   </th><th class="markdownTableHeadNone"><b>10000000</b>    </th></tr>
+<th class="markdownTableHeadNone">list.cpp   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0.0261   </td><td class="markdownTableBodyNone">0.2556   </td><td class="markdownTableBodyNone">2.5078   </td><td class="markdownTableBodyNone">26.4518   </td><td class="markdownTableBodyNone">269.0197    </td></tr>
 <tr class="markdownTableRowEven">
@@ -231,7 +252,7 @@ Results</h3>
 </table>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">deque.cpp   </th><th class="markdownTableHeadNone"><b>1000</b>   </th><th class="markdownTableHeadNone"><b>10000</b>   </th><th class="markdownTableHeadNone"><b>100000</b>   </th><th class="markdownTableHeadNone"><b>1000000</b>   </th><th class="markdownTableHeadNone"><b>10000000</b>    </th></tr>
+<th class="markdownTableHeadNone">deque.cpp   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0.0288   </td><td class="markdownTableBodyNone">0.2867   </td><td class="markdownTableBodyNone">2.8377   </td><td class="markdownTableBodyNone">29.1334   </td><td class="markdownTableBodyNone">310.3281    </td></tr>
 <tr class="markdownTableRowEven">
@@ -242,26 +263,26 @@ Results</h3>
 <td class="markdownTableBodyNone">Strategy 2   </td><td class="markdownTableBodyNone">0.0004   </td><td class="markdownTableBodyNone">0.0035   </td><td class="markdownTableBodyNone">0.0406   </td><td class="markdownTableBodyNone">0.4356   </td><td class="markdownTableBodyNone">4.2891   </td></tr>
 </table>
 <p><em><b>Note: <a class="el" href="upgraded_vector_8cpp.html">upgradedVector.cpp</a> is not compared to others because it uses separate algorithms.</b></em></p>
-<h4><a class="anchor" id="autotoc_md16"></a>
+<h4><a class="anchor" id="autotoc_md18"></a>
 Speed</h4>
 <ul>
 <li><b>The fastest</b> way to sort list into two groups is by using <em>list</em> type container combined with <b>Strategy 2</b>.</li>
 <li><b>The slowest</b> results were using <em>vector</em> type container combined with <b>Strategy 2</b>. This result shoud have occured due to constant use of <em>erase</em> while deleting stupid students from main vector after moving them to new vector *'stupid'*.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md17"></a>
+<h4><a class="anchor" id="autotoc_md19"></a>
 Memory</h4>
 <ul>
 <li><b>Strategy 1</b> should appear as <b>the most memory consuming</b> way for sorting data, but it is difficult to measure difference while sorting data, since large part of the memory goes to reading and storing data into container.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md18"></a>
+<h1><a class="anchor" id="autotoc_md20"></a>
 v0.5</h1>
-<h3><a class="anchor" id="autotoc_md19"></a>
+<h3><a class="anchor" id="autotoc_md21"></a>
 Changes</h3>
 <ul>
 <li>vector.cpp now renamed into main.cpp.</li>
 <li>updated <a class="el" href="_student_8h.html">Student.h</a>.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md20"></a>
+<h3><a class="anchor" id="autotoc_md22"></a>
 New</h3>
 <ul>
 <li>Added new structs in <em>LiStudent.h</em> (for <b>list&lt;&gt;</b>) and <em>DeStudent.h</em> (for <b>deque&lt;&gt;</b>).</li>
@@ -273,20 +294,21 @@ New</h3>
 </li>
 <li><b>Warning:</b> files should be genereated in <em>main.cpp</em> for new version functionality.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md21"></a>
+<h3><a class="anchor" id="autotoc_md23"></a>
 Testing</h3>
-<h4><a class="anchor" id="autotoc_md22"></a>
+<h4><a class="anchor" id="autotoc_md24"></a>
 System parameters</h4>
 <ul>
 <li>CPU: 2.60GHz, 2592 Mhz, 6 Core(s), 12 Logical Processor(s);</li>
 <li>RAM: 32.0 GB;</li>
 <li>SSD: 476 GB;</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md23"></a>
+<h4><a class="anchor" id="autotoc_md25"></a>
 Results</h4>
+<p><em><b>Time measured in seconds</b></em></p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone"><b>Vector.cpp</b>   </th><th class="markdownTableHeadNone">1'000   </th><th class="markdownTableHeadNone">10'000   </th><th class="markdownTableHeadNone">100'000   </th><th class="markdownTableHeadNone">1'000'000   </th><th class="markdownTableHeadNone">10'000'000    </th></tr>
+<th class="markdownTableHeadNone"><b>Vector.cpp</b>   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0,0269   </td><td class="markdownTableBodyNone">0,3142   </td><td class="markdownTableBodyNone">2,5572   </td><td class="markdownTableBodyNone">25,7897   </td><td class="markdownTableBodyNone">257,5104    </td></tr>
 <tr class="markdownTableRowEven">
@@ -297,7 +319,7 @@ smart and stupid   </td><td class="markdownTableBodyNone">0,0269746   </td><td c
 </table>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone"><b>List.cpp</b>   </th><th class="markdownTableHeadNone">1'000   </th><th class="markdownTableHeadNone">10'000   </th><th class="markdownTableHeadNone">100'000   </th><th class="markdownTableHeadNone">1'000'000   </th><th class="markdownTableHeadNone">10'000'000    </th></tr>
+<th class="markdownTableHeadNone"><b>List.cpp</b>   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0,0349   </td><td class="markdownTableBodyNone">0,3384   </td><td class="markdownTableBodyNone">3,6570   </td><td class="markdownTableBodyNone">32,6085   </td><td class="markdownTableBodyNone">293,0656    </td></tr>
 <tr class="markdownTableRowEven">
@@ -308,7 +330,7 @@ smart and stupid   </td><td class="markdownTableBodyNone">0,03492989   </td><td 
 </table>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone"><b>Deque.cpp</b>   </th><th class="markdownTableHeadNone">1'000   </th><th class="markdownTableHeadNone">10'000   </th><th class="markdownTableHeadNone">100'000   </th><th class="markdownTableHeadNone">1'000'000   </th><th class="markdownTableHeadNone">10'000'000    </th></tr>
+<th class="markdownTableHeadNone"><b>Deque.cpp</b>   </th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Read   </td><td class="markdownTableBodyNone">0,0318   </td><td class="markdownTableBodyNone">0,3459   </td><td class="markdownTableBodyNone">3,3893   </td><td class="markdownTableBodyNone">35,5437   </td><td class="markdownTableBodyNone">320,6025    </td></tr>
 <tr class="markdownTableRowEven">
@@ -317,27 +339,27 @@ smart and stupid   </td><td class="markdownTableBodyNone">0,03492989   </td><td 
 <td class="markdownTableBodyNone">Sorted into<br  />
 smart and stupid   </td><td class="markdownTableBodyNone">0,038182024   </td><td class="markdownTableBodyNone">0,345921990   </td><td class="markdownTableBodyNone">3,3893215488   </td><td class="markdownTableBodyNone">35,54372514330   </td><td class="markdownTableBodyNone">320,602523622130   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md24"></a>
+<h1><a class="anchor" id="autotoc_md26"></a>
 v0.4</h1>
-<h3><a class="anchor" id="autotoc_md25"></a>
+<h3><a class="anchor" id="autotoc_md27"></a>
 Updates</h3>
 <ul>
 <li>Some functions now separated into new cpp files.</li>
 <li>Updated *"Mylib.h"*.</li>
 <li>Global variable <em>finaltype</em> is now in *"Answers.h"*.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md26"></a>
+<h3><a class="anchor" id="autotoc_md28"></a>
 New</h3>
 <ul>
 <li>Added new <b>file generator</b>, which uses buffer.</li>
 <li>Added new <b>struct Answers</b> in header file *"Answers.h"*, for storing settings.</li>
 <li>New function Settings now allows to choose how to work with data.</li>
 <li>_"Datatype3"_ function allows to generate new files and use them to sort students into two groups: <em>smart</em> and <em>stupid</em>.</li>
-<li>Time measured is seconds.</li>
 </ul>
+<p><em><b>Time measured in seconds</b></em></p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone"></th><th class="markdownTableHeadNone">1'000   </th><th class="markdownTableHeadNone">10'000   </th><th class="markdownTableHeadNone">100'000   </th><th class="markdownTableHeadNone">1'000'000   </th><th class="markdownTableHeadNone">10'000'00    </th></tr>
+<th class="markdownTableHeadNone"></th><th class="markdownTableHeadNone"><b>1'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000 students</b>   </th><th class="markdownTableHeadNone"><b>100'000 students</b>   </th><th class="markdownTableHeadNone"><b>1'000'000 students</b>   </th><th class="markdownTableHeadNone"><b>10'000'000 students</b>    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Created   </td><td class="markdownTableBodyNone">0,0057   </td><td class="markdownTableBodyNone">0,0403   </td><td class="markdownTableBodyNone">0,4077   </td><td class="markdownTableBodyNone">4,1532   </td><td class="markdownTableBodyNone">44,9614    </td></tr>
 <tr class="markdownTableRowEven">
@@ -345,9 +367,9 @@ New</h3>
 sorted   </td><td class="markdownTableBodyNone">0,0384   </td><td class="markdownTableBodyNone">0,3523   </td><td class="markdownTableBodyNone">3,4296   </td><td class="markdownTableBodyNone">32,8797   </td><td class="markdownTableBodyNone">284,6534   </td></tr>
 </table>
 <p>| Smart.txt and Stupid.txt created | 322,9005 | | Program duration | 372,5057 |</p>
-<h1><a class="anchor" id="autotoc_md27"></a>
+<h1><a class="anchor" id="autotoc_md29"></a>
 v0.3</h1>
-<h3><a class="anchor" id="autotoc_md28"></a>
+<h3><a class="anchor" id="autotoc_md30"></a>
 Updates</h3>
 <ul>
 <li>All functions separated into different <b>cpp</b> files. Files are stored in _"functions"_ folder.</li>
@@ -358,9 +380,9 @@ Updates</h3>
 <li>Added new exceptions in file reading function _"GatherFileData"_.</li>
 <li><em>Notes.md</em> moved to _"ReadOnly"_ folder.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md29"></a>
+<h1><a class="anchor" id="autotoc_md31"></a>
 v0.2</h1>
-<h3><a class="anchor" id="autotoc_md30"></a>
+<h3><a class="anchor" id="autotoc_md32"></a>
 Updates</h3>
 <ul>
 <li>Updated _"Mylib.h"_.</li>
@@ -372,7 +394,7 @@ Updates</h3>
 </li>
 <li>Output shows both <b>FinalMedian</b> and <b>FinalAverage</b> columns.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md31"></a>
+<h3><a class="anchor" id="autotoc_md33"></a>
 New</h3>
 <ul>
 <li>Added file reading functions:<ul>
@@ -388,7 +410,7 @@ New</h3>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md32"></a>
+<h1><a class="anchor" id="autotoc_md34"></a>
 v0.1</h1>
 <p>This version has two subversions: with C array (<em>carray.cpp</em>) and with Vector type array (<em>vector.cpp</em>). <em><b>Vector subversion will be used for further development.</b></em> Both solutions supported by <em><a class="el" href="_mylib_8h.html">Mylib.h</a></em>. </p>
 </div></div><!-- PageDoc -->
